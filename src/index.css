@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy: #1a2744;
+  --cream: #f5f0e8;
+  --terracotta: #c45d3a;
+  --sage: #a8b5a0;
+  --gold: #d4a853;
+  --gold-dark: #9a7a3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--cream);
+  color: var(--navy);
+  min-height: 100dvh;
+}
+
+.font-display {
+  font-family: 'DM Serif Display', serif;
+}
+
+.font-body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy);
+  opacity: 0.2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.3;
+}
+
+/* Selection */
+::selection {
+  background: var(--terracotta);
+  color: var(--cream);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tailwind custom colors */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bg-navy { background-color: var(--navy); }
+  .bg-cream { background-color: var(--cream); }
+  .bg-terracotta { background-color: var(--terracotta); }
+  .bg-sage { background-color: var(--sage); }
+  .bg-gold { background-color: var(--gold); }
+
+  .text-navy { color: var(--navy); }
+  .text-cream { color: var(--cream); }
+  .text-terracotta { color: var(--terracotta); }
+  .text-sage { color: var(--sage); }
+  .text-gold { color: var(--gold); }
+  .text-gold-dark { color: var(--gold-dark); }
+
+  .border-navy { border-color: var(--navy); }
+  .border-terracotta { border-color: var(--terracotta); }
+
+  .shadow-terracotta { --tw-shadow-color: var(--terracotta); }
+  .shadow-navy { --tw-shadow-color: var(--navy); }
+}
